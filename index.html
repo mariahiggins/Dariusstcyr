@@ -73,6 +73,31 @@ nav .wrap{display:flex;align-items:center;gap:18px;padding:10px max(5vw,16px);ma
 .ilock .last{font-family:"Alfa Slab One",serif;font-size:clamp(30px,8.6vw,150px);line-height:.9;letter-spacing:.02em;text-transform:uppercase;color:#fff;white-space:nowrap}
 @media(prefers-reduced-motion:reduce){.intro{display:none}}
 
+/* jack of all trades */
+.jack{position:relative;height:180vh;background:#000;color:#fff}
+.jstick{position:sticky;top:60px;height:calc(100svh - 60px);overflow:hidden}
+.jstage{position:relative;width:100%;height:100%;perspective:1400px}
+.pc{position:absolute;left:0;top:0;will-change:transform}
+.pci{position:relative;width:100%;height:100%;transform-style:preserve-3d}
+.face{position:absolute;inset:0;border-radius:5.5%/3.9%;backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:0 1px 2px rgba(0,0,0,.3),0 16px 34px rgba(0,0,0,.5);overflow:hidden}
+.front{background:linear-gradient(160deg,#fff,#f0eee9);color:#111;transform:rotateY(0)}
+.back{background:#fff;transform:rotateY(180deg)}
+.back::before{content:"";position:absolute;inset:4.5%;border-radius:3.5%/2.5%;background:repeating-linear-gradient(45deg,rgba(245,89,8,.55) 0 1px,transparent 1px 6px),repeating-linear-gradient(-45deg,rgba(245,89,8,.55) 0 1px,transparent 1px 6px),#111;box-shadow:inset 0 0 0 2px var(--purple),inset 0 0 0 5px #111,inset 0 0 0 6px var(--purple)}
+.back svg{position:absolute;left:50%;top:50%;width:22%;transform:translate(-50%,-50%);fill:var(--purple);background:#111;padding:8%;border-radius:50%;box-sizing:content-box;box-shadow:0 0 0 1.5px var(--purple)}
+.cn{position:absolute;z-index:2;display:flex;flex-direction:column;align-items:center;font:700 var(--cnf)/.9 Georgia,"Times New Roman",serif;color:#111}
+.cn svg{width:.62em;margin-top:.18em;fill:#111}
+.tl{left:3.2%;top:2.3%}.br{right:3.2%;bottom:2.3%;transform:rotate(180deg)}
+.front:has(.ph) .cn{background:#fff;padding:.3em .28em .25em}
+.front:has(.ph) .tl{border-radius:0 0 .3em 0}.front:has(.ph) .br{border-radius:0 0 .3em 0}
+.mid{position:absolute;inset:18% 14%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8%;text-align:center}
+.mid svg{width:30%;fill:var(--purple)}
+.mid b{font:700 var(--lbf)/1.1 "Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:.06em}
+.ph{position:absolute;inset:3.2%;border-radius:3.5%/2.5%;overflow:hidden;background:#000;box-shadow:0 0 0 1px rgba(0,0,0,.6)}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph b{position:absolute;left:0;right:0;bottom:0;padding:26% 16% 9%;background:linear-gradient(transparent,rgba(0,0,0,.82));color:#fff;text-align:center;font:700 var(--lbf)/1.1 "Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:.07em;text-wrap:balance}
+.jtitle{position:absolute;left:0;right:0;text-align:center;font-size:clamp(26px,4.6vw,52px);color:#fff;opacity:0;transform:translateY(20px);text-transform:uppercase}
+.jtitle::after{content:"";display:block;width:80px;height:3px;background:var(--purple);margin:12px auto 0}
+
 /* social */
 .social{background:var(--purple);color:#000}
 .social .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(14px,4vw,40px);padding:clamp(26px,4vw,44px) 16px}
@@ -239,6 +264,10 @@ footer{padding:26px max(5vw,16px);display:flex;flex-wrap:wrap;justify-content:sp
     <p class="tagl">Road to the PBR</p>
   </div>
 </header>
+<section class="jack" id="jack" aria-label="Jack of all trades: Bull rider, Cowboy, Stock contractor, Horse trainer, Mechanic, Fisherman">
+  <div class="jstick"><div class="jstage" id="jstage"><div class="pc" data-i="0"><div class="pci"><div class="face front"><span class="cn tl">J<svg viewBox="0 0 20 22" aria-hidden="true"><path d="M10 1C7 6 1 9 1 13.5 1 16.5 3.4 18 5.6 18c1.6 0 2.8-.7 3.4-1.6L8 21h4l-1-4.6c.6.9 1.8 1.6 3.4 1.6 2.2 0 4.6-1.5 4.6-4.5C19 9 13 6 10 1z"/></svg></span><span class="ph"><img src="img/card_bull.jpg" alt="" loading="eager"><b>Bull rider</b></span><span class="cn br">J<svg viewBox="0 0 20 22" aria-hidden="true"><path d="M10 1C7 6 1 9 1 13.5 1 16.5 3.4 18 5.6 18c1.6 0 2.8-.7 3.4-1.6L8 21h4l-1-4.6c.6.9 1.8 1.6 3.4 1.6 2.2 0 4.6-1.5 4.6-4.5C19 9 13 6 10 1z"/></svg></span></div><div class="face back"><svg viewBox="0 0 20 22" aria-hidden="true"><path d="M10 1C7 6 1 9 1 13.5 1 16.5 3.4 18 5.6 18c1.6 0 2.8-.7 3.4-1.6L8 21h4l-1-4.6c.6.9 1.8 1.6 3.4 1.6 2.2 0 4.6-1.5 4.6-4.5C19 9 13 6 10 1z"/></svg></div></div></div><div class="pc" data-i="1"><div class="pci"><div class="face front"><span class="cn tl">J<svg viewBox="0 0 20 22" aria-hidden="true"><path d="M10 1C7 6 1 9 1 13.5 1 16.5 3.4 18 5.6 18c1.6 0 2.8-.7 3.4-1.6L8 21h4l-1-4.6c.6.9 1.8 1.6 3.4 1.6 2.2 0 4.6-1.5 4.6-4.5C19 9 13 6 10 1z"/></svg></span><span class="ph"><img src="img/card_cowboy.jpg" alt="" loading="eager"><b>Cowboy</b></span><span class="cn br">J<svg viewBox="0 0 20 22" aria-hidden="true"><path d="M10 1C7 6 1 9 1 13.5 1 16.5 3.4 18 5.6 18c1.6 0 2.8-.7 3.4-1.6L8 21h4l-1-4.6c.6.9 1.8 1.6 3.4 1.6 2.2 0 4.6-1.5 4.6-4.5C19 9 13 6 10 1z"/></svg></span></div><div class="face back"><svg viewBox="0 0 20 22" aria-hidden="true"><path d="M10 1C7 6 1 9 1 13.5 1 16.5 3.4 18 5.6 18c1.6 0 2.8-.7 3.4-1.6L8 21h4l-1-4.6c.6.9 1.8 1.6 3.4 1.6 2.2 0 4.6-1.5 4.6-4.5C19 9 13 6 10 1z"/></svg></div></div></div><div class="pc" data-i="2"><div class="pci"><div class="face front"><span class="cn tl">J<svg viewBox="0 0 20 22" aria-hidden="true"><path d="M10 1C7 6 1 9 1 13.5 1 16.5 3.4 18 5.6 18c1.6 0 2.8-.7 3.4-1.6L8 21h4l-1-4.6c.6.9 1.8 1.6 3.4 1.6 2.2 0 4.6-1.5 4.6-4.5C19 9 13 6 10 1z"/></svg></span><span class="ph"><img src="img/card_stock.jpg" alt="" loading="eager"><b>Stock contractor</b></span><span class="cn br">J<svg viewBox="0 0 20 22" aria-hidden="true"><path d="M10 1C7 6 1 9 1 13.5 1 16.5 3.4 18 5.6 18c1.6 0 2.8-.7 3.4-1.6L8 21h4l-1-4.6c.6.9 1.8 1.6 3.4 1.6 2.2 0 4.6-1.5 4.6-4.5C19 9 13 6 10 1z"/></svg></span></div><div class="face back"><svg viewBox="0 0 20 22" aria-hidden="true"><path d="M10 1C7 6 1 9 1 13.5 1 16.5 3.4 18 5.6 18c1.6 0 2.8-.7 3.4-1.6L8 21h4l-1-4.6c.6.9 1.8 1.6 3.4 1.6 2.2 0 4.6-1.5 4.6-4.5C19 9 13 6 10 1z"/></svg></div></div></div><div class="pc" data-i="3"><div class="pci"><div class="face front"><span class="cn tl">J<svg viewBox="0 0 20 22" aria-hidden="true"><path d="M10 1C7 6 1 9 1 13.5 1 16.5 3.4 18 5.6 18c1.6 0 2.8-.7 3.4-1.6L8 21h4l-1-4.6c.6.9 1.8 1.6 3.4 1.6 2.2 0 4.6-1.5 4.6-4.5C19 9 13 6 10 1z"/></svg></span><span class="ph"><img src="img/card_horse.jpg" alt="" loading="eager"><b>Horse trainer</b></span><span class="cn br">J<svg viewBox="0 0 20 22" aria-hidden="true"><path d="M10 1C7 6 1 9 1 13.5 1 16.5 3.4 18 5.6 18c1.6 0 2.8-.7 3.4-1.6L8 21h4l-1-4.6c.6.9 1.8 1.6 3.4 1.6 2.2 0 4.6-1.5 4.6-4.5C19 9 13 6 10 1z"/></svg></span></div><div class="face back"><svg viewBox="0 0 20 22" aria-hidden="true"><path d="M10 1C7 6 1 9 1 13.5 1 16.5 3.4 18 5.6 18c1.6 0 2.8-.7 3.4-1.6L8 21h4l-1-4.6c.6.9 1.8 1.6 3.4 1.6 2.2 0 4.6-1.5 4.6-4.5C19 9 13 6 10 1z"/></svg></div></div></div><div class="pc" data-i="4"><div class="pci"><div class="face front"><span class="cn tl">J<svg viewBox="0 0 20 22" aria-hidden="true"><path d="M10 1C7 6 1 9 1 13.5 1 16.5 3.4 18 5.6 18c1.6 0 2.8-.7 3.4-1.6L8 21h4l-1-4.6c.6.9 1.8 1.6 3.4 1.6 2.2 0 4.6-1.5 4.6-4.5C19 9 13 6 10 1z"/></svg></span><span class="ph"><img src="img/card_mech.jpg" alt="" loading="eager"><b>Mechanic</b></span><span class="cn br">J<svg viewBox="0 0 20 22" aria-hidden="true"><path d="M10 1C7 6 1 9 1 13.5 1 16.5 3.4 18 5.6 18c1.6 0 2.8-.7 3.4-1.6L8 21h4l-1-4.6c.6.9 1.8 1.6 3.4 1.6 2.2 0 4.6-1.5 4.6-4.5C19 9 13 6 10 1z"/></svg></span></div><div class="face back"><svg viewBox="0 0 20 22" aria-hidden="true"><path d="M10 1C7 6 1 9 1 13.5 1 16.5 3.4 18 5.6 18c1.6 0 2.8-.7 3.4-1.6L8 21h4l-1-4.6c.6.9 1.8 1.6 3.4 1.6 2.2 0 4.6-1.5 4.6-4.5C19 9 13 6 10 1z"/></svg></div></div></div><div class="pc" data-i="5"><div class="pci"><div class="face front"><span class="cn tl">J<svg viewBox="0 0 20 22" aria-hidden="true"><path d="M10 1C7 6 1 9 1 13.5 1 16.5 3.4 18 5.6 18c1.6 0 2.8-.7 3.4-1.6L8 21h4l-1-4.6c.6.9 1.8 1.6 3.4 1.6 2.2 0 4.6-1.5 4.6-4.5C19 9 13 6 10 1z"/></svg></span><span class="ph"><img src="img/card_fish.jpg" alt="" loading="eager"><b>Fisherman</b></span><span class="cn br">J<svg viewBox="0 0 20 22" aria-hidden="true"><path d="M10 1C7 6 1 9 1 13.5 1 16.5 3.4 18 5.6 18c1.6 0 2.8-.7 3.4-1.6L8 21h4l-1-4.6c.6.9 1.8 1.6 3.4 1.6 2.2 0 4.6-1.5 4.6-4.5C19 9 13 6 10 1z"/></svg></span></div><div class="face back"><svg viewBox="0 0 20 22" aria-hidden="true"><path d="M10 1C7 6 1 9 1 13.5 1 16.5 3.4 18 5.6 18c1.6 0 2.8-.7 3.4-1.6L8 21h4l-1-4.6c.6.9 1.8 1.6 3.4 1.6 2.2 0 4.6-1.5 4.6-4.5C19 9 13 6 10 1z"/></svg></div></div></div><h2 class="jtitle" id="jtitle">Jack of All Trades</h2></div></div>
+</section>
+
 <section class="social" aria-label="Social links"><div class="wrap">
   <a href="https://www.instagram.com/darius_stcyr/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" class="dot"/></svg><span>Instagram</span><small>@darius_stcyr</small></a>
   <a href="https://www.tiktok.com/@dariusstcyr" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.5 2.6 2.4 4.5 5 4.8"/></svg><span>TikTok</span><small>@dariusstcyr</small></a>
@@ -369,6 +398,35 @@ if(rm||!intro){intro&&intro.remove()}else{
   setTimeout(end,2800);
   intro.addEventListener('click',end);
 }
+}
+</script>
+
+<script>
+{
+const sec=document.getElementById('jack'),stage=document.getElementById('jstage'),cards=[...stage.querySelectorAll('.pc')],title=document.getElementById('jtitle');
+const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+let L=null;
+const layout=()=>{const W=stage.clientWidth,H=stage.clientHeight,tH=Math.min(84,H*.11),pad=W<600?14:40;
+  const opts=[[3,3],[2,2,2]];let best=null;
+  for(const rows of opts){const mr=Math.max(...rows),n=rows.length;const w=Math.min(320,(W-2*pad)/(mr+(mr-1)*.06),(H-tH-20)/(n*1.4+(n-1)*.06));if(!best||w>best.w+1)best={rows,w}}
+  const w=best.w,h=w*1.4,g=w*.06,n=best.rows.length,gh=n*h+(n-1)*g,y0=Math.max(12,(H-tH-gh)/2);
+  const slots=[];const mk=Math.max(...best.rows);best.rows.forEach((k,ri)=>{const hg=Math.max(g,(W-mk*w)/(mk+1)),x0=(W-(k*w+(k-1)*hg))/2;for(let j=0;j<k;j++)slots.push([x0+j*(w+hg),y0+ri*(h+g)])});
+  const st=[W/2-w/2,y0+gh/2-h/2];
+  cards.forEach(c=>{c.style.width=w+'px';c.style.height=h+'px';c.style.setProperty('--cnf',(w*.085)+'px');c.style.setProperty('--lbf',Math.max(11,w*.078)+'px')});
+  title.style.top=(y0+gh+Math.max(10,tH*.2))+'px';
+  L={w,h,slots,st}};
+const ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+const draw=()=>{if(!L)return;const r=sec.getBoundingClientRect(),span=r.height-stage.clientHeight;let p=rm?1:Math.min(1,Math.max(0,-r.top/span));
+  cards.forEach((c,i)=>{const t=Math.min(1,Math.max(0,(p-.04-i*.07)/.3)),e=ease(t);const [sx,sy]=L.st,[tx,ty]=L.slots[i];
+    const off=(1-e)*(i-3)*1.6;const x=sx+(tx-sx)*e+off,y=sy+(ty-sy)*e-off*.6,rot=(1-e)*((i%2?1:-1)*(2+i));
+    const fl=t<.15?180:180*(1-ease((t-.15)/.85));
+    c.style.transform=`translate(${x}px,${y}px) rotate(${rot}deg)`;c.firstChild.style.transform=`rotateY(${fl}deg)`;
+    c.style.zIndex=t>0&&t<1?50:(t>=1?10+i:30-i)});
+  const q=Math.min(1,Math.max(0,(p-.78)/.12));title.style.opacity=q;title.style.transform=`translateY(${20*(1-q)}px)`};
+const ro=new ResizeObserver(()=>{layout();draw()});ro.observe(stage);
+addEventListener('scroll',()=>requestAnimationFrame(draw),{passive:true});
+layout();draw();
+if(rm)sec.style.height='auto',stage.parentElement.style.position='relative';
 }
 </script>
 </body>
